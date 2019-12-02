@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QuikServe" Class="KpiTrendDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(local);Initial Catalog=QuikServe;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="QuikServeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="" Member="KpiTrends">
+    <Type Name="KpiTrend">
+      <Column Member="Org" Type="System.String" CanBeNull="true" />
+      <Column Member="MM" Type="System.String" CanBeNull="true" />
+      <Column Member="DM" Type="System.String" CanBeNull="true" />
+      <Column Member="Loc" Type="System.String" CanBeNull="true" />
+      <Column Member="Store" Type="System.String" CanBeNull="true" />
+      <Column Member="KPI" Type="System.String" CanBeNull="true" />
+      <Column Member="Per" Type="System.Int32" CanBeNull="true" />
+      <Column Member="Val1" Type="System.Decimal" CanBeNull="true" />
+      <Column Member="Val2" Type="System.Decimal" CanBeNull="true" />
+      <Column Member="ReportValue" Type="System.Decimal" CanBeNull="true" />
+      <Column Member="BenchMark" Type="System.Decimal" CanBeNull="true" />
+      <Column Member="BenchMark2" Type="System.Decimal" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spQsKPITrendV2" Method="spQsKPITrendV2" IsComposable="true">
+    <Parameter Name="date1" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="date2" Type="System.DateTime" DbType="SmallDateTime" />
+    <Parameter Name="org" Type="System.String" DbType="Char(25)" />
+    <Parameter Name="Company" Parameter="company" Type="System.String" DbType="Char(25)" />
+    <Parameter Name="Market" Parameter="market" Type="System.String" DbType="Char(25)" />
+    <Parameter Name="DM" Parameter="dM" Type="System.String" DbType="Char(35)" />
+    <Parameter Name="StoreNumber" Parameter="storeNumber" Type="System.String" DbType="Char(35)" />
+    <Return Type="object" />
+  </Function>
+</Database>

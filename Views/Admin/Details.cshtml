@@ -1,0 +1,57 @@
+﻿@model QuikServe.Models.WebReportSettings
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Details</title>
+</head>
+<body>
+    <fieldset>
+        <legend>WebReportSettings</legend>
+    
+        <div class="display-label">WebReportId</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.WebReportId)
+        </div>
+    
+        <div class="display-label">CustomReportName</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.CustomReportName)
+        </div>
+    
+        <div class="display-label">DateRangeType</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.DateRangeType)
+        </div>
+    
+        <div class="display-label">SeedDate</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.SeedDate)
+        </div>
+    
+        <div class="display-label">SeedIncrement</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.SeedIncrement)
+        </div>
+    
+        <div class="display-label">Type</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Type)
+        </div>
+    
+        <div class="display-label">ColumnDefinition</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.ColumnDefinition)
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id=Model.WebReportSettingId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

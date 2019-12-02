@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.75, 8.5" name="KpiTrendData">
+  <DataContextMoniker Name="/KpiTrendDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="cee98a50-c7a6-4880-98b1-81dce23b889d" absoluteBounds="12.5, 2.875, 2, 3.1170068359374996">
+      <DataClassMoniker Name="/KpiTrendDataDataContext/KpiTrend" />
+      <nestedChildShapes>
+        <elementListCompartment Id="59348503-5982-4f9b-acf8-a3cff6afdc25" absoluteBounds="12.515, 3.335, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

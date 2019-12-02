@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Web Reports Admin</title>
+    <link type="text/css" href="@Url.Content("~/ext-4.1-gpl/resources/css/ext-all.css")" rel="stylesheet" />
+    <link type="text/css" href="@Url.Content("~/resources/css/grid.css")" rel="stylesheet" />
+    <link type="text/css" href="@Url.Content("~/ext-4.1-gpl/src/ux/css/CheckHeader.css")" rel="stylesheet" />
+    <link type="text/css" href="@Url.Content("~/ext-4.1-gpl/src/ux/grid/css/GridFilters.css")" rel="stylesheet" />
+    <link type="text/css" href="@Url.Content("~/ext-4.1-gpl/src/ux/grid/css/RangeMenu.css")" rel="stylesheet" />
+    <script type="text/javascript" src="@Url.Content("~/ext-4.1-gpl/ext.js")" ></script>
+    <script type="text/javascript">
+        Ext.Loader.setConfig({
+            enabled: true,
+            disableCaching: true,
+            paths: {
+                'Ext.ux': '@Url.Content("~/ext-4.1-gpl/src/ux")'
+            }
+        });
+    </script>
+    <script type="text/javascript" src="@Url.Content("~/all-adminclasses.js")" ></script>
+    <script type="text/javascript" src="@Url.Content("~/adminapp-all.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/resources/js/date.js")"></script>
+    <meta name="author" content="Integrated Solutions - rs" />
+    <!-- Date: 2012-05-31 -->
+</head>
+<body>
+
+</body>
+</html>

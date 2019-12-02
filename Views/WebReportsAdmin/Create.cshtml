@@ -1,0 +1,94 @@
+﻿@model QuikServe.Models.WebReports
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>WebReports</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ReportName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ReportName)
+            @Html.ValidationMessageFor(model => model.ReportName)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Procedure", "Procedure")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Procedure", String.Empty)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Status)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Status)
+            @Html.ValidationMessageFor(model => model.Status)
+        </div>
+
+        <!-- Section is not generated based on razor view - hard coded to supply values for WebReportSettings -->
+
+        <div class="editor-label">
+            <!--<label for="CustomReportName">Custom Report Name</label>-->
+            @Html.Label("CustomReportName", "Custom Report Name")
+        </div>
+        <div class="editor-field">
+            <input id="CustomReportName" name="CustomReportName" />
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("DateRangeType", "Date Range Type")
+        </div>
+        <div class="editor-field">
+            <input id="DateRangeType" name="DateRangeType" />
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("SeedDate", "Seed Date")
+        </div>
+        <div class="editor-field">
+            <input id="SeedDate" name="SeedDate" />
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("SeedIncrement", "Seed Increment")
+        </div>
+        <div class="editor-field">
+            <input id="SeedIncrement" name="SeedIncrement" />
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Type", "Type")
+        </div>
+        <div class="editor-field">
+            <input id="Type" name="Type" />
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("ColumnDefinition", "Column Definition")
+        </div>
+        <div class="editor-field">
+            <input id="ColumnDefinition" name="ColumnDefinition" />
+        </div>
+
+        <!-- this controllers code was passed additional WebReportSettings specific data based on its mode properties -->
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

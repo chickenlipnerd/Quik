@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>SErr</title>
+</head>
+<body>
+    <div>
+        @{
+            Response.Write("<h3>" + ViewData["HomeError"] + "</h3>");
+            //Response.Write("<p>User Good: " + ViewData["UserGood"] + "</p>");
+            //Response.Write("<p>User Org: " + ViewData["UserOrg"] + "</p>");
+            //Response.Write("<p>User Scope: " + ViewData["UserScope"] + "</p>");
+            //Response.Write("<p>User Id: " + ViewData["UserId"] + "</p>");
+        }
+    </div>
+</body>
+</html>

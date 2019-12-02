@@ -1,0 +1,88 @@
+﻿@model IEnumerable<QuikServe.Models.WebReportSettings>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table>
+        <tr>
+            <th>
+                WebReports
+            </th>
+            <th>
+                Procedure Name
+            </th>
+            <th>
+                Status
+            </th>
+            <th>
+                CustomReportName
+            </th>
+            <th>
+                DateRangeType
+            </th>
+            <th>
+                SeedDate
+            </th>
+            <th>
+                SeedIncrement
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                ColumnDefinition
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WebReports.ReportName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WebReports.Procedure)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WebReports.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomReportName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateRangeType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SeedIncrement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ColumnDefinition)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.WebReportSettingId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.WebReportSettingId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.WebReportSettingId })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

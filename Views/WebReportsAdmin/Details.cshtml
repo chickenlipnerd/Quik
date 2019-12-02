@@ -1,0 +1,30 @@
+﻿@model QuikServe.Models.WebReports
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>WebReports</legend>
+
+    <div class="display-label">ReportName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ReportName)
+    </div>
+
+    <div class="display-label">Procedure</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Procedure)
+    </div>
+
+    <div class="display-label">Status</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.WebReportId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

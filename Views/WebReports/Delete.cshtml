@@ -1,0 +1,61 @@
+﻿@model QuikServe.Models.WebReportSettings
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <fieldset>
+        <legend>WebReportSettings</legend>
+    
+        <div class="display-label">WebReports</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.WebReports.ReportName)
+        </div>
+    
+        <div class="display-label">CustomReportName</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.CustomReportName)
+        </div>
+    
+        <div class="display-label">DateRangeType</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.DateRangeType)
+        </div>
+    
+        <div class="display-label">SeedDate</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.SeedDate)
+        </div>
+    
+        <div class="display-label">SeedIncrement</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.SeedIncrement)
+        </div>
+    
+        <div class="display-label">Type</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Type)
+        </div>
+    
+        <div class="display-label">ColumnDefinition</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.ColumnDefinition)
+        </div>
+    </fieldset>
+    @using (Html.BeginForm()) {
+        <p>
+            <input type="submit" value="Delete" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    }
+
+</body>
+</html>
